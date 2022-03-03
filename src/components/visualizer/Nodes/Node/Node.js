@@ -3,7 +3,7 @@ import NodeStyles from "./NodeStyles";
 
 const Node = () => {
   const classes = NodeStyles();
-  return <div></div>;
+  return <div className={classes.node}></div>;
 };
 
 export default Node;
