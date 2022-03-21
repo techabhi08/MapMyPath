@@ -1,1 +1,0 @@
-# This file will contain all extra stuff like header, footer, tutorial, etc
