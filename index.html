@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Poppins font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <!-- Logo -->
+    <link rel="icon" href="images/logo.svg">
+
+    <title>Path Visualizer</title>
+  </head>
+  <body>
+ 	<nav class="navbar navbar-dark navbar-expand-md fixed-top">
+ 		<div class="container-fluid">
+ 			<a class="navbar-brand aaf" href="#"><img alt="Logo" src="images/logo.svg" height="40px" width="50px">
+      </a>
+ 			 <button class="navbar-toggler" type="button" data-toggle="collapse"data-target="#navbarSupportedContent">
+    			<span class="navbar-toggler-icon"></span>
+  			</button>
+  			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	 			<ul class="navbar-nav mr-auto ">
+	 				<li class="nav-item dropdown">
+	 					<a class = "nav-link  dropdown-toggle" href = "#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Algorithms</a>
+	 					<div class="dropdown-menu navbar-dark" aria-labelledby="navbarDropdown">
+	 						<a class="dropdown-item" href = "#" onclick="Bfs()" data-toggle="collapse" data-target=".navbar-collapse.show">Breadth first search</a>
+	 						<a class="dropdown-item" href = "#" onclick="Dfs()" data-toggle="collapse" data-target=".navbar-collapse.show">Depth first search</a>
+	 						<a class="dropdown-item" href = "#" onclick="A_star()" data-toggle="collapse" data-target=".navbar-collapse.show">A* search</a>
+	 						<a class="dropdown-item" href = "#" onclick=" Dijkstra()" data-toggle="collapse" data-target=".navbar-collapse.show"> Dijkstra's Algorithm</a>
+	 					</div>
+	 				</li>
+	 				<li class="nav-item box"><a class = "nav-link" href = "#" onclick="Maze_generator()" data-toggle="collapse" data-target=".navbar-collapse.show">Maze&nbsp;Generation</a></li>
+	        <li class="nav-item box"><a class = "nav-link" href = "#" onclick= "random_walls()" data-toggle="collapse" data-target=".navbar-collapse.show">Random&nbsp;Walls</a></li>
+	        <li class="nav-item box"><a class = "nav-link" href = "#" onclick="reset_paths()" data-toggle="collapse" data-target=".navbar-collapse.show">Clear&nbsp;Path</a></li>
+	        <li class="nav-item box"><a class = "nav-link" href = "#" onclick="reset()" data-toggle="collapse" data-target=".navbar-collapse.show">Clear&nbsp;Board</a></li>
+	        <li class="nav-item box"><a class = "nav-link aaf" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">Instructions</a></li>
+	 			</ul>
+	 		</div>
+ 		</div>
+ 	</nav>
+     <div class="row align-items-center">
+      <div class="col-2"></div>
+      <p id = "output" class="col-8 rounded">Path Visualizer</p>
+      <div class="col-md-1 offset-md-1 col-2 px-auto">
+      	<a href="https://github.com/Narapureddy-Srikanth/Path-Visualizer" class="order-last git" id="unstyled" target="_black">Github</a>
+      </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+     <div id="instructions_panel" class="panel">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-md-5 col-8">
+            <h2 class = "bg-orange">Instructions</h2>
+          </div>
+          <div class="col"></div>
+        </div>
+        <div class="row align-items-centers">
+          <div class="col-md-2 col-12 offset-md-0 offset-4"><img src="images/logo.svg" height="150px" width="70px"></div>
+          <div class="col-md-8 col-12">
+            <p class="text-info">Click within the grid and drag your mouse to draw <img src="images/wall.svg" height="20px" width="20px"> obstacles.</p>
+            <p class="text-info"> Drag the <img src="images/start.svg" height="20px" width="20px"> start node to set the start position.</p>
+            <p class="text-info">Drag the <img src="images/finish.svg" height="20px" width="20px"> end node to set the end position.</p> 
+            <p class="text-info">Choose an algorithm from the     "<span class="bg-orange">Algorithms</span>" drop-down menu.</p> 
+            <p class="text-info">You can also draw Mazes and Random walls by choosing "<span class="bg-orange">Maze&nbsp;Generation</span>" and "<span class="bg-orange">Random&nbsp;Walls</span>" from above drop-down menu.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-9"></div>
+          <div class="col-3">
+            <button id="hide"  class="btn btn-outline-info">Hide</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src="./js/Path_Finding_Algorithms/breadth_first_search.js"></script>
+    <script src="./js/Path_Finding_Algorithms/A_star_search.js"></script>
+    <script src="./js/Path_Finding_Algorithms/breadth_first_search.js"></script><script src="./js/Path_Finding_Algorithms/Dijkstra_Algorithm.js"></script>
+    <script src="./js/Path_Finding_Algorithms/depth_first_search.js"></script>
+    <script src="./js/Maze_Generator/Recusive_Maze_generation.js"></script>
+    <script src="./js/Maze_Generator/Random_walls.js"></script>
+    <script src="./js/project.js"></script>
+
+  <!-- <footer>
+     <a href="https://github.com/Narapureddy-Srikanth" class="set-bottom-right" id="unstyled" target="_black"> <img src="images/github.png" height="20px" width="20px"> Github</a>
+  </footer> -->
+  </body>
+</html>
