@@ -3,7 +3,9 @@
 	margin: 0px; 
 	padding: 0px;
 }
-
+:root{
+	--main-bg-color:#031543;
+}
 html {
 	height: 100%;
 	width: 100%;
@@ -17,10 +19,10 @@ body{
 	background-color:#ffffff;
 	margin: 0px;
     overflow: hidden;
-    background-color: #243441;
+    background-color: var(--main-bg-color);;
 }
 .navbar-dark {
-	background-color: #243441;
+	background-color: var(--main-bg-color);;
 }
 #canvas{
 	position: relative;
