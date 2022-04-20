@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "express": "^4.17.3",
+    "hbs": "^4.2.0",
+    "nodemon": "^2.0.15"
+  },
+  "name": "mapmypath",
+  "description": "A visualiser that helps to understand complex graph algorithms.\r Our main objective was for users to have an interactive experience with our visualiser, the ability to change start/end point, add weight/wall in the path, auto maze generation and more.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techabhi08/MapMyPath.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techabhi08/MapMyPath/issues"
+  },
+  "homepage": "https://github.com/techabhi08/MapMyPath#readme"
+}
