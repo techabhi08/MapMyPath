@@ -6,12 +6,12 @@ const port = process.env.PORT || 3000;
 
 // app.set('view engine', 'hbs');
 
-// app.use(express.static("./css/styles.css"));
+app.use(express.static("public"));
 // app.use(express.static("/images"));
 // app.use(express.static("/js"));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname,'/index.html'))
+    res.sendFile(path.join(__dirname,'./public/index.html'))
     // res.send("Welcome to the app")
 });
 
