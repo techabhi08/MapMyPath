@@ -23,7 +23,8 @@ npm run test
 ```
 > Now you are ready to hack it and contribute!!! 
 
-## Preview
+## <img width="60" src="https://raw.githubusercontent.com/techabhi08/MapMyPath/main/public/images/preview_title_GIF.gif"> Preview
+<img src = "./public/images/preview.gif"/>
 
 
 <summary><h2><img src="https://raw.githubusercontent.com/techabhi08/MapMyPath/main/public/images/toolsGIF.gif" align="center" width="60" /> Languages and Tools...</h2></summary>
