@@ -9,6 +9,8 @@ Our main objective was for users to have an interactive experience with our visu
 <li>Dijkstra's algorithm</li>
 <li>A* Search Algorithm</li>
 
+## <img width="35" src="https://raw.githubusercontent.com/codechefvitbhopal/eventsImages/main/readme_images/installation.png"> Installation
+
 
 <summary><h2><img src="https://raw.githubusercontent.com/techabhi08/MapMyPath/main/public/images/toolsGIF.gif" align="center" width="60" /> Tools used</h2></summary>
 <br>
