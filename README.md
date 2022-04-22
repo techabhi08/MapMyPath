@@ -11,7 +11,9 @@ Our main objective was for users to have an interactive experience with our visu
 <li>A* Search Algorithm</li>
 
 ## <img width="60" src="https://raw.githubusercontent.com/techabhi08/MapMyPath/main/public/images/installGIF.gif"> Installation
-* To run our website on your local machine you need to clone this repository and install all node modules.
+* Fork the repository
+* To run our website on your local machine you need to clone this repository.
+* Install all node modules.
 * To check if your system has npm installed type ```npm --version``` in cmd or in the terminal of whatever operating system you are using.
 * If it's not showing the version download [Node.js](https://nodejs.org/en/download/) from https://nodejs.org/en/download/ for your OS.
 * In the folder where you cloned this repo, run ```npm install``` to install all the packages in package.json.
